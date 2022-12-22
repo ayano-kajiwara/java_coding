@@ -27,10 +27,9 @@ public class Question08 {
 				for (int i = 0; i < num; i++) {
 					System.out.print((i + 1) + "個目：");
 					String inputStr2 = scan.nextLine();
-					int nums = Integer.parseInt(inputStr2);
-					numsList.add(nums);
-					int getNum = numsList.get(i); // ※1で使用する整数の取得
-					sum += getNum; // ※1で使用する整数の合計
+					int data = Integer.parseInt(inputStr2);
+					numsList.add(data);
+					sum += data; // ※1で使用する整数の合計
 				}
 
 				// 入力された値をメッセージ出力
