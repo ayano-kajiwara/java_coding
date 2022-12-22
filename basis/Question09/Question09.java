@@ -20,8 +20,8 @@ public class Question09 {
 				data[i] = Integer.parseInt(inputStr);
 			}
 			// 配列を昇順に並び替える
-			for (int j = 0; j < 4; j++) {
-				for (int k = 4; j < k; k--) {
+			for (int j = 0; j < data.length - 1; j++) {
+				for (int k = data.length - 1; j < k; k--) {
 					if (data[k] < data[k - 1]) {
 						int temp = data[k];
 						data[k] = data[k - 1];
