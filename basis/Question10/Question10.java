@@ -3,6 +3,10 @@ package basis.Question10;
 import java.util.Scanner;
 
 public class Question10 {
+	// 入力された数に掛ける数
+	public static final int MULTIPLE = 2;
+	// 入力された数に乗じる数
+	public static final int POWER = 2;
 
 	public static void main(String[] args) {
 		// try-with-resouce
@@ -26,14 +30,12 @@ public class Question10 {
 
 	// 引数を2倍にした値を出力する
 	public static void printCalculateDouble(int x) {
-		final int MULTIPLE = 2;
 		int doubleNum = x * MULTIPLE;
 		System.out.println("入力された　" + x + "　を" + MULTIPLE + "倍した値は　" + doubleNum + "　です");
 	}
 
 	// 引数を2乗にした結果を出力する
 	public static void printCalculateSquare(int x) {
-		final int POWER = 2;
 		int squareNum = (int) Math.pow(x, POWER);
 		System.out.println("入力された　" + x + "　を" + POWER + "乘した値は　" + squareNum + "　です");
 	}
