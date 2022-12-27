@@ -3,8 +3,6 @@ package basis.Question10;
 import java.util.Scanner;
 
 public class Question10 {
-	// 後に入力する整数を入れる変数
-	static int num;
 
 	public static void main(String[] args) {
 		// try-with-resouce
@@ -14,7 +12,7 @@ public class Question10 {
 			// キーボードから文字列入力
 			String inputStr = scan.nextLine();
 			// 入力文字列を整数へ変換
-			num = Integer.parseInt(inputStr);
+			int num = Integer.parseInt(inputStr);
 			//引数をnumとして、printCalculateDoubleメソッドを呼び出す
 			printCalculateDouble(num);
 			//引数をnumとして、printCalculateSquareメソッドを呼び出す
@@ -30,14 +28,14 @@ public class Question10 {
 	public static void printCalculateDouble(int x) {
 		final int MULTIPLE = 2;
 		int doubleNum = x * MULTIPLE;
-		System.out.println("入力された　" + num + "　を" + MULTIPLE + "倍した値は　" + doubleNum + "　です");
+		System.out.println("入力された　" + x + "　を" + MULTIPLE + "倍した値は　" + doubleNum + "　です");
 	}
 
 	// 引数を2乗にした結果を出力する
 	public static void printCalculateSquare(int x) {
 		final int POWER = 2;
 		int squareNum = (int) Math.pow(x, POWER);
-		System.out.println("入力された　" + num + "　を" + POWER + "乘した値は　" + squareNum + "　です");
+		System.out.println("入力された　" + x + "　を" + POWER + "乘した値は　" + squareNum + "　です");
 	}
 
 }
