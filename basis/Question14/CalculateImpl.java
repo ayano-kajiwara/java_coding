@@ -1,6 +1,6 @@
 package basis.Question14;
 
-public class Calculatelmpl implements Calculate {
+public class CalculateImpl implements Calculate {
 	//入力された数を掛けた結果を割る数
 	static final int DIVISOR = 2;
 

@@ -15,8 +15,11 @@ public class Question13 {
 			String inputStr0 = scan.nextLine();
 			// 入力文字列を整数へ変換
 			int num0 = Integer.parseInt(inputStr0);
-			// 1または2が入力された場合
-			if ((num0 == 1) || (num0 == 2)) {
+
+			if (!(num0 == 1 || num0 == 2)) { // 1〜2以外が入力された場合
+				System.out.println("1〜2の範囲で入力してください");
+
+			} else { // 1または2が入力された場合
 				// メッセージ出力
 				System.out.println("整数を入力してください");
 				System.out.print("1個目：");
@@ -31,23 +34,19 @@ public class Question13 {
 				// 入力文字列を整数へ変換
 				int num2 = Integer.parseInt(inputStr2);
 
-				// 1：足し算結果⇒引き算結果の順で出力する場合
-				if (num0 == 1) {
+				if (num0 == 1) { // 1：足し算結果⇒引き算結果の順で出力する場合
 					// CalculateSuperインスタンスを生成
 					CalculateSuper cs = new CalculateSuper(num1, num2);
 					// 足し算結果⇒引き算結果の順で出力処理を呼び出し
 					cs.flow();
 
-					// 引き算結果⇒足し算結果の順で出力する場合
-				} else {
+				} else { // 2：引き算結果⇒足し算結果の順で出力する場合
 					// CalculateChildインスタンスを生成
 					CalculateChild cc = new CalculateChild(num1, num2);
 					// 引き算結果⇒足し算結果の順で出力処理を呼び出し
 					cc.flow();
 				}
-				// 1〜2以外が入力された場合
-			} else {
-				System.out.println("1〜2の範囲で入力してください");
+
 			}
 
 			// 整数以外の値が入力された場合
