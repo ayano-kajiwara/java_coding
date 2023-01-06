@@ -21,12 +21,12 @@ public class Question14 {
 			// 入力文字列を整数へ変換
 			int num2 = Integer.parseInt(inputStr2);
 			// Calculatetelmplインスタンスを生成
-			CalculateImpl ci = new CalculateImpl();
+			CalculateImpl calculateImpl = new CalculateImpl();
 			// 掛け算結果を出力
-			System.out.println(num1 + " と　" + num2 + "　の掛け算結果の値は　" + ci.multiplication(num1, num2) + "　です");
+			System.out.println(num1 + " と　" + num2 + "　の掛け算結果の値は　" + calculateImpl.multiplication(num1, num2) + "　です");
 			// 掛け算結果を2で割った数を出力
 			System.out.println(num1 + "　と　" + num2 + " の掛け算結果を" + CalculateImpl.DIVISOR + "で割った値は　"
-					+ ci.division(num1, num2) + "　です");
+					+ calculateImpl.division(num1, num2) + "　です");
 
 			// 整数以外の値が入力された場合
 		} catch (NumberFormatException e) {

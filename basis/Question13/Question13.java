@@ -18,39 +18,36 @@ public class Question13 {
 
 			if (!(num0 == 1 || num0 == 2)) { // 1〜2以外が入力された場合
 				System.out.println("1〜2の範囲で入力してください");
+				return;
+			}
+			// メッセージ出力
+			System.out.println("整数を入力してください");
+			System.out.print("1個目：");
+			// キーボードから文字列入力
+			String inputStr1 = scan.nextLine();
+			// 入力文字列を整数へ変換
+			int num1 = Integer.parseInt(inputStr1);
+			// メッセージ出力
+			System.out.print("2個目：");
+			// キーボードから文字列入力
+			String inputStr2 = scan.nextLine();
+			// 入力文字列を整数へ変換
+			int num2 = Integer.parseInt(inputStr2);
 
-			} else { // 1または2が入力された場合
-				// メッセージ出力
-				System.out.println("整数を入力してください");
-				System.out.print("1個目：");
-				// キーボードから文字列入力
-				String inputStr1 = scan.nextLine();
-				// 入力文字列を整数へ変換
-				int num1 = Integer.parseInt(inputStr1);
-				// メッセージ出力
-				System.out.print("2個目：");
-				// キーボードから文字列入力
-				String inputStr2 = scan.nextLine();
-				// 入力文字列を整数へ変換
-				int num2 = Integer.parseInt(inputStr2);
+			if (num0 == 1) { // 1：足し算結果⇒引き算結果の順で出力する場合
+				// CalculateSuperインスタンスを生成
+				CalculateSuper calculateSuper = new CalculateSuper(num1, num2);
+				// 足し算結果⇒引き算結果の順で出力処理を呼び出し
+				calculateSuper.flow();
 
-				if (num0 == 1) { // 1：足し算結果⇒引き算結果の順で出力する場合
-					// CalculateSuperインスタンスを生成
-					CalculateSuper cs = new CalculateSuper(num1, num2);
-					// 足し算結果⇒引き算結果の順で出力処理を呼び出し
-					cs.flow();
-
-				} else { // 2：引き算結果⇒足し算結果の順で出力する場合
-					// CalculateChildインスタンスを生成
-					CalculateChild cc = new CalculateChild(num1, num2);
-					// 引き算結果⇒足し算結果の順で出力処理を呼び出し
-					cc.flow();
-				}
-
+			} else { // 2：引き算結果⇒足し算結果の順で出力する場合
+				// CalculateChildインスタンスを生成
+				CalculateChild calculateChild = new CalculateChild(num1, num2);
+				// 引き算結果⇒足し算結果の順で出力処理を呼び出し
+				calculateChild.flow();
 			}
 
-			// 整数以外の値が入力された場合
-		} catch (NumberFormatException e) {
+		} catch (NumberFormatException e) { // 整数以外の値が入力された場合
 			System.out.println("整数以外の値が入力されました");
 		}
 	}
